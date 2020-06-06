@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  thymeleaf:
+    prefix: classpath:/templates/   # 默认值
+    suffix: .html                   # 默认值
+
+mybatis-plus:
+  configuration:
+    # mybatis-plus打印日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 枚举类映射
+  type-enums-package: com.example.mybatisplus.entity.enums
+  global-config:
+    db-config:
+      # 逻辑删除
+      logic-not-delete-value: 0
+      logic-delete-value: 1
